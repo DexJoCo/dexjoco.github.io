@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DexJoCo: A Unified Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo</title>
+  <meta name="description" content="DexJoCo is a unified MuJoCo benchmark and toolkit for task-oriented dexterous manipulation with Allegro Hand and Franka Panda robots.">
+  <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_v1.0_tpbg.png" type="image/png">
+  <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_v1.0_tpbg.png" type="image/png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_white_v1.0_tpbg.png" type="image/png" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="DexJoCo home">
+          <img class="brand-logo" src="assets/image/icon/DexJoCo_logo_blue_v1.0.png" alt="DexJoCo">
+        </a>
+        <ul class="site-nav">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#benchmark">Benchmark</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
+          <li><a href="#policy">Policy</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero intro-block">
+        <div class="article-head">
+
+          <h1><span class="pi-mark">DexJoCo</span>: A Unified Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo</h1>
+          <p class="dek">
+            DexJoCo is a unified benchmark and toolkit for task-oriented dexterous manipulation in MuJoCo, covering tool use, bimanual coordination, long-horizon execution, reasoning, human demonstration collection, and modern VLA evaluation.
+          </p>
+        </div>
+
+        <dl class="meta-grid">
+          <div class="resource-card">
+            <dt>Code</dt>
+            <dd><a href="#" data-coming-soon aria-label="Code repository coming soon">GitHub</a></dd>
+          </div>
+          <div class="resource-card">
+            <dt>Paper</dt>
+            <dd><a href="#" data-coming-soon aria-label="Paper coming soon"><span class="pi-mark">DexJoCo</span>.pdf</a></dd>
+          </div>
+          <div class="resource-card">
+            <dt>Data</dt>
+            <dd><a href="#" data-coming-soon aria-label="Hugging Face dataset coming soon">Hugging Face</a></dd>
+          </div>
+        </dl>
+
+        <figure class="hero-media hero-media-video">
+          <video controls autoplay muted loop playsinline preload="metadata" aria-label="Hero video showing general-purpose robotic manipulation.">
+            <source src="assets/video/DexJoCo-Video-refined_v1.4_HEVC_MP4.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </section>
+
+      <article id="article" class="article-layout">
+        <section class="prose intro-block">
+          <p>
+            Achieving human-level manipulation requires dexterous hands and standardized evaluation. Existing dexterous benchmarks often lack realistic manipulator-hand setups, tasks that reveal the unique capabilities of dexterous hands over parallel grippers, reliable demonstration acquisition tools, and unified pipelines for evaluating modern VLA models.
+          </p>
+          <p>
+            DexJoCo addresses these gaps with 11 functionally grounded tasks built around the Franka Panda and Allegro Hand. It provides a low-cost motion-capture data collection system, 1.1K human demonstration trajectories, replay-based domain randomization, and evaluation support for modern imitation learning and VLA policies.
+          </p>
+        </section>
+
+        <section class="prose">
+          <h2 id="benchmark">Benchmark for task-oriented dexterous manipulation</h2>
+          <p>
+            DexJoCo tasks are designed around functional interactions rather than isolated object relocation. Each task defines interactive objects and success constraints over execution order, object poses, articulated joint states, and contact, so completion requires meaningful progress toward an everyday objective.
+          </p>
+          <p>
+            The benchmark covers tool use, reasoning, bimanual coordination, and long-horizon execution. Its assets provide explicit visual interaction feedback, such as unlocking an iPad after entering a password, spraying water from a watering can, and waking a display by clicking a mouse.
+          </p>
+        </section>
+
+        <section class="thumb-showcase" aria-label="DexJoCo manipulation demos">
+          <div class="thumb-row-block">
+            <div class="thumb-row-head">
+              <p class="task-label">Single-arm demos</p>
+            </div>
+            <div class="thumb-carousel" data-carousel>
+              <button class="thumb-arrow thumb-arrow-prev" type="button" data-carousel-prev aria-label="Scroll single-arm demos left">&#8592;</button>
+              <div class="thumb-viewport" data-carousel-viewport>
+                <div class="thumb-rail">
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot watering a plant.">
+                      <source src="assets/video/tasks/Water plant.mp4" type="video/mp4">
+                    </video>
+                    <h3>Water Plant</h3>
+                    <p>Grasp the watering can and apply water to the plant.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot hammering a nail into a board.">
+                      <source src="assets/video/tasks/Hammer nail.mp4" type="video/mp4">
+                    </video>
+                    <h3>Hammer Nail</h3>
+                    <p>Use the hammer to drive the nail into the wooden board.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot moving a mouse and clicking.">
+                      <source src="assets/video/tasks/Click mouse.mp4" type="video/mp4">
+                    </video>
+                    <h3>Click Mouse</h3>
+                    <p>Move the mouse to the purple mouse pad and click the left mouse button.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot picking up an item and lifting a basket.">
+                      <source src="assets/video/tasks/Pick bucket.mp4" type="video/mp4">
+                    </video>
+                    <h3>Pick Bucket</h3>
+                    <p>Place the boxed food into the bucket and then lift the bucket.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot using tongs to pinch an object.">
+                      <source src="assets/video/tasks/Pinch tongs.mp4" type="video/mp4">
+                    </video>
+                    <h3>Pinch Tongs</h3>
+                    <p>Grasp the tongs and perform three consecutive open-close motions.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot folding glasses and placing them into a case.">
+                      <source src="assets/video/tasks/Fold glass.mp4" type="video/mp4">
+                    </video>
+                    <h3>Fold Glasses</h3>
+                    <p>Fold the glasses and place them into the case.</p>
+                  </article>
+                </div>
+              </div>
+              <button class="thumb-arrow thumb-arrow-next" type="button" data-carousel-next aria-label="Scroll single-arm demos right">&#8594;</button>
+            </div>
+          </div>
+
+          <div class="thumb-row-block">
+            <div class="thumb-row-head">
+              <p class="task-label">Bimanual demos</p>
+            </div>
+            <div class="thumb-carousel" data-carousel>
+              <button class="thumb-arrow thumb-arrow-prev" type="button" data-carousel-prev aria-label="Scroll bimanual demos left">&#8592;</button>
+              <div class="thumb-viewport" data-carousel-viewport>
+                <div class="thumb-rail">
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot operating a microwave.">
+                      <source src="assets/video/tasks/Bimanual microwave.mp4" type="video/mp4">
+                    </video>
+                    <h3>Bimanual Microwave</h3>
+                    <p>Open the microwave door, place the food inside, close the door, and press the start button.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot unlocking an iPad.">
+                      <source src="assets/video/tasks/Bimanual unlock ipad.mp4" type="video/mp4">
+                    </video>
+                    <h3>Bimanual Unlock iPad</h3>
+                    <p>Grasp the iPad and enter the password 123 to unlock the device.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot solving a Hanoi tower task.">
+                      <source src="assets/video/tasks/Bimanual Hanoi.mp4" type="video/mp4">
+                    </video>
+                    <h3>Bimanual Hanoi</h3>
+                    <p>Execute the final two moves of the three-level Tower of Hanoi.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot assembling an object.">
+                      <source src="assets/video/tasks/Bimanual assembly.mp4" type="video/mp4">
+                    </video>
+                    <h3>Bimanual Assembly</h3>
+                    <p>Grasp the tray with the left hand and the peg with the right hand, then insert the peg into the hole.</p>
+                  </article>
+                  <article class="thumb-card">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot positioning a photograph.">
+                      <source src="assets/video/tasks/Bimanual photograph.mp4" type="video/mp4">
+                    </video>
+                    <h3>Bimanual Photograph</h3>
+                    <p>Grasp the camera with the left hand, align it with the logo, and press the shutter button with the right hand.</p>
+                  </article>
+                </div>
+              </div>
+              <button class="thumb-arrow thumb-arrow-next" type="button" data-carousel-next aria-label="Scroll bimanual demos right">&#8594;</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="prose">
+          <h2 id="toolkit">Data collection system, low-cost and user-friendly</h2>
+          <p>
+            DexJoCo provides a low-cost teleoperation system for efficient human demonstration collection. Rokoko Smartgloves capture hand motion without camera occlusion, while HTC Vive Trackers and Base Stations track wrist motion for Franka end-effector control in a unified setup of about $2,300 USD.
+          </p>
+          <p>
+            The software combines wrist tracking with retarget MLP, a lightweight self-supervised retargeting method that maps human fingertip poses to Allegro Hand joint configurations without paired human-robot annotations.
+          </p>
+        </section>
+
+        <section class="toolkit-card">
+          <div class="toolkit-note">
+            <p>DexJoCo is designed as a low-cost system for human demonstration data collection.</p>
+          </div>
+          <div class="toolkit-grid">
+            <article class="stage-card stage-card-wide">
+              <div class="stage-topline">
+                <span class="stage-index">1</span>
+                <h3>Hardware Design</h3>
+              </div>
+              <div class="robot-grid">
+                <figure class="device-card">
+                  <span class="device-count">1 pair</span>
+                  <img src="assets/image/system/Rokoko Smartgloves.png" alt="Rokoko Smartgloves device visual.">
+                  <figcaption>Rokoko Smartgloves</figcaption>
+                </figure>
+                <figure class="device-card">
+                  <span class="device-count">2 units</span>
+                  <img src="assets/image/system/HTC Vive Trackers.png" alt="HTC Vive Trackers device visual.">
+                  <figcaption>HTC Vive Tracker</figcaption>
+                </figure>
+                <figure class="device-card">
+                  <span class="device-count">2 units</span>
+                  <img src="assets/image/system/HTC Base Stations.png" alt="HTC Base Stations device visual.">
+                  <figcaption>HTC Base Station</figcaption>
+                </figure>
+                <figure class="device-card">
+                  <span class="device-count">2 units</span>
+                  <img src="assets/image/system/3D-printed connector.png" alt="3D-printed connector device visual.">
+                  <figcaption>3D-printed connector</figcaption>
+                </figure>
+              </div>
+            </article>
+            <article class="stage-card stage-card-wide teleop-card">
+              <div class="stage-topline">
+                <span class="stage-index">2</span>
+                <h3>Teleoperation Algorithm</h3>
+              </div>
+              <p>
+                The teleoperation system combines hand motion retargeting and wrist motion tracking. Because human
+                and robotic hands have different structures, direct linear mapping is infeasible. DexJoCo uses
+                <strong>retarget MLP</strong> to preserve fingertip motion directions, workspace coverage, pinch behavior, and
+                collision avoidance for real-time Allegro Hand control.
+              </p>
+            </article>
+          </div>
+          <div class="outputs-panel">
+            <div class="outputs-header">
+              <span>System summary</span>
+              <strong>Low-cost hardware capture + self-supervised teleoperation retargeting</strong>
+            </div>
+            <div class="output-columns">
+              <div class="output-column">
+                <h4>Hardware Design</h4>
+                <ul>
+                  <li>Rokoko Smartgloves capture hand motion without camera occlusion.</li>
+                  <li>HTC Vive Trackers and Base Stations track wrist motion and end-effector pose.</li>
+                  <li>The full setup stays comfortable, unified, and low-cost at about $2,300 USD.</li>
+                </ul>
+              </div>
+              <div class="output-column">
+                <h4>Teleoperation Algorithm</h4>
+                <ul>
+                  <li>The system combines hand motion retargeting with wrist motion tracking.</li>
+                  <li>retarget MLP bridges structural differences between human and robot hands.</li>
+                  <li>Self-supervised learning removes the need for manual human-robot pair annotation.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="prose">
+          <h2 id="policy">Datasets and policy learning</h2>
+          <p>
+            DexJoCo collects 1.1K human demonstration trajectories across the 11 benchmark tasks. Each trajectory records rich observations, including third-person and wrist-mounted visual streams, object and robot states, TCP pose, and hand joint angles, while actions are represented as target absolute end-effector poses and hand joint angles.
+          </p>
+          <p>
+            The dataset can be converted into common formats such as LeRobot Dataset v3.0 and Diffusion Policy Zarr. DexJoCo then evaluates policies through constructed task environments and an asynchronous server-client deployment pipeline.
+          </p>
+        </section>
+
+                <section class="task-showcase">
+          <article class="task-panel">
+            <div class="task-copy">
+              <p class="task-label">augmentation</p>
+              <h3>Domain Randomizations</h3>
+              <p>
+                DexJoCo supports domain randomization across all task scenarios. Object placement and table height are randomized for trajectory diversity, while third-person camera poses, lighting direction and color, and tabletop textures are randomized to evaluate visual robustness.
+              </p>
+            </div>
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Domain randomization overview for garment folding.">
+              <source src="assets/video/random/random.mp4" type="video/mp4">
+            </video>
+          </article>
+        </section>
+        
+        <section class="vision-strip">
+          <article class="vision-card">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Third-person camera pose randomization demo.">
+              <source src="assets/video/random/camera pose.mp4" type="video/mp4">
+            </video>
+            <h3>Third-person camera pose</h3>
+            <p>Camera poses are sampled on a spherical surface, then filtered to select viewpoints with minimal occlusion.</p>
+          </article>
+          <article class="vision-card">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Lighting direction and color randomization demo.">
+              <source src="assets/video/random/light.mp4" type="video/mp4">
+            </video>
+            <h3>Lighting direction and color</h3>
+            <p>For lighting randomization, we follow a simple procedure inspired by our implementation. Each light in the scene is randomized in terms of its position, direction, and diffuse color to introduce diverse illumination conditions.</p>
+          </article>
+          <article class="vision-card">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Table height randomization demo.">
+              <source src="assets/video/random/table height.mp4" type="video/mp4">
+            </video>
+            <h3>Table height</h3>
+            <p>Table height is randomized together with object placement to broaden the state distribution of replayed trajectories.</p>
+          </article>
+          <article class="vision-card">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Table texture randomization demo.">
+              <source src="assets/video/random/table texture.mp4" type="video/mp4">
+            </video>
+            <h3>Table texture</h3>
+            <p>For tabletop texture randomization, we sample textures from a pre-constructed texture library.</p>
+          </article>
+        </section>
+
+        <section class="evaluation-block">
+          <div class="evaluation-copy prose">
+            <h2 id="evaluation">Baseline model performance</h2>
+            <p>
+              DexJoCo benchmarks ACT, Diffusion Policy, π0.5, and GR00T N1.5 under object-only and full visual randomization. The benchmark is challenging: visual randomization sharply reduces success rates, difficult bimanual tasks expose persistent failures, and precise interaction remains a key bottleneck.
+            </p>
+          </div>
+          <div class="scoreboard">
+            <div class="score-row">
+              <span class="score-name">DP-Transformer</span>
+              <div class="score-bar"><span style="width: 50.4%;"></span></div>
+              <strong>50.4%</strong>
+            </div>
+            <div class="score-row">
+              <span class="score-name">DP-CNN</span>
+              <div class="score-bar"><span style="width: 47.6%;"></span></div>
+              <strong>47.6%</strong>
+            </div>
+            <div class="score-row">
+              <span class="score-name">ACT</span>
+              <div class="score-bar"><span style="width: 35.5%;"></span></div>
+              <strong>35.5%</strong>
+            </div>
+            <div class="score-row">
+              <span class="score-name">π0.5</span>
+              <div class="score-bar"><span style="width: 52.5%;"></span></div>
+              <strong>52.5%</strong>
+            </div>
+            <div class="score-row">
+              <span class="score-name">GR00T-N1.5</span>
+              <div class="score-bar"><span style="width: 40.2%;"></span></div>
+              <strong>40.2%</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="prose citation-block" id="citation">
+          <div class="citation-card">
+            <div class="citation-head">
+              <div>
+                <p class="task-label">Citation</p>
+                <h2>Citation coming soon</h2>
+              </div>
+            </div>
+            <p class="citation-note">
+              The website, demos, and video assets are available first. BibTeX will be added after the paper or preprint is released.
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+  <div class="coming-soon-toast" role="status" aria-live="polite" hidden>Coming soon</div>
+  <script>
+    const comingSoonToast = document.querySelector(".coming-soon-toast");
+    let comingSoonTimer;
+
+    document.querySelectorAll("[data-coming-soon]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (!comingSoonToast) return;
+
+        comingSoonToast.hidden = false;
+        comingSoonToast.classList.add("is-visible");
+        window.clearTimeout(comingSoonTimer);
+        comingSoonTimer = window.setTimeout(() => {
+          comingSoonToast.classList.remove("is-visible");
+          comingSoonToast.hidden = true;
+        }, 1600);
+      });
+    });
+
+    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+      const viewport = carousel.querySelector("[data-carousel-viewport]");
+      const prevButton = carousel.querySelector("[data-carousel-prev]");
+      const nextButton = carousel.querySelector("[data-carousel-next]");
+      const firstCard = viewport.querySelector(".thumb-card");
+
+      if (!viewport || !prevButton || !nextButton || !firstCard) return;
+
+      const getStep = () => firstCard.getBoundingClientRect().width + 16;
+
+      const updateButtons = () => {
+        const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+        prevButton.disabled = viewport.scrollLeft <= 4;
+        nextButton.disabled = viewport.scrollLeft >= maxScroll - 4;
+      };
+
+      prevButton.addEventListener("click", () => {
+        viewport.scrollBy({ left: -getStep(), behavior: "smooth" });
+      });
+
+      nextButton.addEventListener("click", () => {
+        viewport.scrollBy({ left: getStep(), behavior: "smooth" });
+      });
+
+      viewport.addEventListener("scroll", updateButtons, { passive: true });
+      window.addEventListener("resize", updateButtons);
+      updateButtons();
+    });
+  </script>
+</body>
+</html>
