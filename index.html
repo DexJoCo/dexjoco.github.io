@@ -5,11 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DexJoCo — Benchmark & Toolkit for Dexterous Manipulation on MuJoCo</title>
   <meta name="description" content="DexJoCo is a unified MuJoCo benchmark and toolkit for task-oriented dexterous manipulation with Allegro Hand and Franka Panda robots.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DexJoCo">
+  <meta property="og:url" content="https://dexjoco.github.io/">
+  <meta property="og:title" content="DexJoCo — Benchmark & Toolkit for Dexterous Manipulation on MuJoCo">
+  <meta property="og:description" content="DexJoCo is a unified MuJoCo benchmark and toolkit for task-oriented dexterous manipulation with Allegro Hand and Franka Panda robots.">
+  <meta property="og:image" content="https://dexjoco.github.io/assets/image/icon/DexJoCo_logo_blue_v1.0.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DexJoCo — Benchmark & Toolkit for Dexterous Manipulation on MuJoCo">
+  <meta name="twitter:description" content="DexJoCo is a unified MuJoCo benchmark and toolkit for task-oriented dexterous manipulation with Allegro Hand and Franka Panda robots.">
+  <meta name="twitter:image" content="https://dexjoco.github.io/assets/image/icon/DexJoCo_logo_blue_v1.0.png">
   <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_v1.0_tpbg.png" type="image/png" media="(prefers-color-scheme: light)">
   <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_white_v1.0_tpbg.png" type="image/png" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#article">Skip to content</a>
   <div class="page-shell">
     <header class="site-header">
       <nav class="top-nav" aria-label="Primary">
@@ -51,7 +62,7 @@
         </dl>
 
         <figure class="hero-media hero-media-video">
-          <video controls autoplay muted loop playsinline preload="metadata" aria-label="Hero video showing general-purpose robotic manipulation.">
+          <video controls autoplay muted loop playsinline preload="metadata" fetchpriority="high" aria-label="Hero video showing general-purpose robotic manipulation.">
             <source src="assets/video/DexJoCo-Video-refined_v1.4_HEVC_MP4.mp4" type="video/mp4">
           </video>
         </figure>
@@ -87,42 +98,42 @@
               <div class="thumb-viewport" data-carousel-viewport>
                 <div class="thumb-rail">
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot watering a plant.">
+                    <video muted loop playsinline preload="none" aria-label="Robot watering a plant.">
                       <source src="assets/video/tasks/water-plant.mp4" type="video/mp4">
                     </video>
                     <h3>Water Plant</h3>
                     <p>Grasp the watering can and apply water to the plant.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot hammering a nail into a board.">
+                    <video muted loop playsinline preload="none" aria-label="Robot hammering a nail into a board.">
                       <source src="assets/video/tasks/hammer-nail.mp4" type="video/mp4">
                     </video>
                     <h3>Hammer Nail</h3>
                     <p>Use the hammer to drive the nail into the wooden board.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot moving a mouse and clicking.">
+                    <video muted loop playsinline preload="none" aria-label="Robot moving a mouse and clicking.">
                       <source src="assets/video/tasks/click-mouse.mp4" type="video/mp4">
                     </video>
                     <h3>Click Mouse</h3>
                     <p>Move the mouse to the purple mouse pad and click the left mouse button.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot picking up an item and lifting a basket.">
+                    <video muted loop playsinline preload="none" aria-label="Robot picking up an item and lifting a basket.">
                       <source src="assets/video/tasks/pick-bucket.mp4" type="video/mp4">
                     </video>
                     <h3>Pick Bucket</h3>
                     <p>Place the boxed food into the bucket and then lift the bucket.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot using tongs to pinch an object.">
+                    <video muted loop playsinline preload="none" aria-label="Robot using tongs to pinch an object.">
                       <source src="assets/video/tasks/pinch-tongs.mp4" type="video/mp4">
                     </video>
                     <h3>Pinch Tongs</h3>
                     <p>Grasp the tongs and perform three consecutive open-close motions.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Robot folding glasses and placing them into a case.">
+                    <video muted loop playsinline preload="none" aria-label="Robot folding glasses and placing them into a case.">
                       <source src="assets/video/tasks/fold-glass.mp4" type="video/mp4">
                     </video>
                     <h3>Fold Glasses</h3>
@@ -143,35 +154,35 @@
               <div class="thumb-viewport" data-carousel-viewport>
                 <div class="thumb-rail">
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot operating a microwave.">
+                    <video muted loop playsinline preload="none" aria-label="Bimanual robot operating a microwave.">
                       <source src="assets/video/tasks/bimanual-microwave.mp4" type="video/mp4">
                     </video>
                     <h3>Bimanual Microwave</h3>
                     <p>Open the microwave door, place the food inside, close the door, and press the start button.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot unlocking an iPad.">
+                    <video muted loop playsinline preload="none" aria-label="Bimanual robot unlocking an iPad.">
                       <source src="assets/video/tasks/bimanual-unlock-ipad.mp4" type="video/mp4">
                     </video>
                     <h3>Bimanual Unlock iPad</h3>
                     <p>Grasp the iPad and enter the password 123 to unlock the device.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot solving a Hanoi tower task.">
+                    <video muted loop playsinline preload="none" aria-label="Bimanual robot solving a Hanoi tower task.">
                       <source src="assets/video/tasks/bimanual-hanoi.mp4" type="video/mp4">
                     </video>
                     <h3>Bimanual Hanoi</h3>
                     <p>Execute the final two moves of the three-level Tower of Hanoi.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot assembling an object.">
+                    <video muted loop playsinline preload="none" aria-label="Bimanual robot assembling an object.">
                       <source src="assets/video/tasks/bimanual-assembly.mp4" type="video/mp4">
                     </video>
                     <h3>Bimanual Assembly</h3>
                     <p>Grasp the tray with the left hand and the peg with the right hand, then insert the peg into the hole.</p>
                   </article>
                   <article class="thumb-card">
-                    <video autoplay muted loop playsinline preload="metadata" aria-label="Bimanual robot positioning a photograph.">
+                    <video muted loop playsinline preload="none" aria-label="Bimanual robot positioning a photograph.">
                       <source src="assets/video/tasks/bimanual-photograph.mp4" type="video/mp4">
                     </video>
                     <h3>Bimanual Photograph</h3>
@@ -207,22 +218,22 @@
               <div class="robot-grid">
                 <figure class="device-card">
                   <span class="device-count">1 pair</span>
-                  <img src="assets/image/system/rokoko-smartgloves.png" alt="Rokoko Smartgloves device visual.">
+                  <img src="assets/image/system/rokoko-smartgloves.png" alt="Rokoko Smartgloves" loading="lazy" decoding="async">
                   <figcaption>Rokoko Smartgloves</figcaption>
                 </figure>
                 <figure class="device-card">
                   <span class="device-count">2 units</span>
-                  <img src="assets/image/system/htc-vive-trackers.png" alt="HTC Vive Trackers device visual.">
+                  <img src="assets/image/system/htc-vive-trackers.png" alt="HTC Vive Trackers" loading="lazy" decoding="async">
                   <figcaption>HTC Vive Tracker</figcaption>
                 </figure>
                 <figure class="device-card">
                   <span class="device-count">2 units</span>
-                  <img src="assets/image/system/htc-base-stations.png" alt="HTC Base Stations device visual.">
+                  <img src="assets/image/system/htc-base-stations.png" alt="HTC Base Stations" loading="lazy" decoding="async">
                   <figcaption>HTC Base Station</figcaption>
                 </figure>
                 <figure class="device-card">
                   <span class="device-count">2 units</span>
-                  <img src="assets/image/system/3d-printed-connector.png" alt="3D-printed connector device visual.">
+                  <img src="assets/image/system/3d-printed-connector.png" alt="3D-printed wrist mount connector" loading="lazy" decoding="async">
                   <figcaption>3D-printed connector</figcaption>
                 </figure>
               </div>
@@ -285,7 +296,7 @@
                 DexJoCo supports domain randomization across all task scenarios. Object placement and table height are randomized for trajectory diversity, while third-person camera poses, lighting direction and color, and tabletop textures are randomized to evaluate visual robustness.
               </p>
             </div>
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Domain randomization overview for garment folding.">
+            <video muted loop playsinline preload="none" aria-label="Domain randomization overview for garment folding.">
               <source src="assets/video/random/random.mp4" type="video/mp4">
             </video>
           </article>
@@ -293,28 +304,28 @@
 
         <section class="vision-strip">
           <article class="vision-card">
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Third-person camera pose randomization demo.">
+            <video muted loop playsinline preload="none" aria-label="Third-person camera pose randomization demo.">
               <source src="assets/video/random/camera-pose.mp4" type="video/mp4">
             </video>
             <h3>Third-person camera pose</h3>
             <p>Camera poses are sampled on a spherical surface, then filtered to select viewpoints with minimal occlusion.</p>
           </article>
           <article class="vision-card">
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Lighting direction and color randomization demo.">
+            <video muted loop playsinline preload="none" aria-label="Lighting direction and color randomization demo.">
               <source src="assets/video/random/light.mp4" type="video/mp4">
             </video>
             <h3>Lighting direction and color</h3>
             <p>For lighting randomization, we follow a simple procedure inspired by our implementation. Each light in the scene is randomized in terms of its position, direction, and diffuse color to introduce diverse illumination conditions.</p>
           </article>
           <article class="vision-card">
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Table height randomization demo.">
+            <video muted loop playsinline preload="none" aria-label="Table height randomization demo.">
               <source src="assets/video/random/table-height.mp4" type="video/mp4">
             </video>
             <h3>Table height</h3>
             <p>Table height is randomized together with object placement to broaden the state distribution of replayed trajectories.</p>
           </article>
           <article class="vision-card">
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Table texture randomization demo.">
+            <video muted loop playsinline preload="none" aria-label="Table texture randomization demo.">
               <source src="assets/video/random/table-texture.mp4" type="video/mp4">
             </video>
             <h3>Table texture</h3>
@@ -376,6 +387,28 @@
   </div>
   <div class="coming-soon-toast" role="status" aria-live="polite" hidden>Coming soon</div>
   <script>
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const videos = document.querySelectorAll("video");
+
+    if (reduceMotion) {
+      videos.forEach((video) => {
+        video.removeAttribute("autoplay");
+        video.pause();
+      });
+    } else if ("IntersectionObserver" in window) {
+      const playWhenVisible = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.1 });
+      videos.forEach((video) => playWhenVisible.observe(video));
+    }
+
     const comingSoonToast = document.querySelector(".coming-soon-toast");
     let comingSoonTimer;
 
