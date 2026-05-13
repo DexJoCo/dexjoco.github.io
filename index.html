@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DexJoCo: A Unified Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo</title>
   <meta name="description" content="DexJoCo is a unified MuJoCo benchmark and toolkit for task-oriented dexterous manipulation with Allegro Hand and Franka Panda robots.">
-  <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_v1.0_tpbg.png" type="image/png">
   <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_v1.0_tpbg.png" type="image/png" media="(prefers-color-scheme: light)">
   <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_white_v1.0_tpbg.png" type="image/png" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="style.css">
@@ -277,7 +276,7 @@
           </p>
         </section>
 
-                <section class="task-showcase">
+        <section class="task-showcase">
           <article class="task-panel">
             <div class="task-copy">
               <p class="task-label">augmentation</p>
@@ -291,7 +290,7 @@
             </video>
           </article>
         </section>
-        
+
         <section class="vision-strip">
           <article class="vision-card">
             <video autoplay muted loop playsinline preload="metadata" aria-label="Third-person camera pose randomization demo.">
@@ -399,9 +398,10 @@
       const viewport = carousel.querySelector("[data-carousel-viewport]");
       const prevButton = carousel.querySelector("[data-carousel-prev]");
       const nextButton = carousel.querySelector("[data-carousel-next]");
-      const firstCard = viewport.querySelector(".thumb-card");
+      if (!viewport || !prevButton || !nextButton) return;
 
-      if (!viewport || !prevButton || !nextButton || !firstCard) return;
+      const firstCard = viewport.querySelector(".thumb-card");
+      if (!firstCard) return;
 
       const getStep = () => firstCard.getBoundingClientRect().width + 16;
 
