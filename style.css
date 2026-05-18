@@ -235,6 +235,22 @@ h4 {
   gap: 6px;
 }
 
+.author-list,
+.affiliation-list,
+.author-notes {
+  display: block;
+}
+
+.author-list {
+  color: var(--text);
+}
+
+.affiliation-list,
+.author-notes {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .meta-grid .resource-card dd {
   font-size: 1.02rem;
 }
@@ -799,10 +815,44 @@ video:-webkit-full-screen {
   margin: 4px 0 0;
 }
 
+.copy-button {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--card-2);
+  color: var(--text);
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.copy-button:hover {
+  background: color-mix(in srgb, var(--card) 82%, var(--card-2));
+  transform: translateY(-1px);
+}
+
 .citation-note {
   max-width: 720px;
   margin: 0;
   color: var(--muted);
+}
+
+.bibtex-block {
+  margin: 0;
+  padding: 16px;
+  max-width: 100%;
+  overflow-x: auto;
+  background: color-mix(in srgb, var(--card-2) 76%, white);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.bibtex-block code {
+  font-family: Consolas, monospace;
 }
 
 .contact-block {
