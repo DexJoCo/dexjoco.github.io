@@ -27,7 +27,12 @@
         <a class="brand" href="#top" aria-label="DexJoCo home">
           <img class="brand-logo" src="assets/image/icon/DexJoCo_logo_blue_v1.0.png" alt="DexJoCo">
         </a>
-        <ul class="site-nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul class="site-nav" id="primary-nav">
           <li><a href="#top">Home</a></li>
           <li><a href="#benchmark">Benchmark</a></li>
           <li><a href="#toolkit">Toolkit</a></li>
@@ -448,6 +453,28 @@
 
     const comingSoonToast = document.querySelector(".coming-soon-toast");
     let comingSoonTimer;
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const siteNav = document.querySelector(".site-nav");
+
+    if (navToggle && siteNav) {
+      const closeNav = () => {
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open menu");
+        siteNav.classList.remove("is-open");
+      };
+
+      navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navToggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+        siteNav.classList.toggle("is-open", !isOpen);
+      });
+
+      siteNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeNav);
+      });
+    }
 
     document.querySelectorAll("[data-coming-soon]").forEach((link) => {
       link.addEventListener("click", (event) => {
