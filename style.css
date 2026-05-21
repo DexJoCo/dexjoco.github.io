@@ -67,8 +67,10 @@ a {
   text-underline-offset: 0.22em;
 }
 
-a:hover {
-  text-decoration-thickness: 2px;
+@media (hover: hover) {
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
 }
 
 .page-shell {
@@ -164,9 +166,11 @@ h4 {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.site-nav a:hover {
-  color: var(--accent-strong);
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .site-nav a:hover {
+    color: var(--accent-strong);
+    transform: translateY(-1px);
+  }
 }
 
 .nav-toggle {
@@ -281,14 +285,16 @@ h4 {
   transition: transform 0.2s ease;
 }
 
-.meta-grid dd a:hover {
-  background: color-mix(in srgb, var(--card) 82%, var(--card-2));
-  color: var(--text);
-  transform: translateY(-1px);
-}
+@media (hover: hover) {
+  .meta-grid dd a:hover {
+    background: color-mix(in srgb, var(--card) 82%, var(--card-2));
+    color: var(--text);
+    transform: translateY(-1px);
+  }
 
-.meta-grid dd a:hover::after {
-  transform: translate(1px, -0.16em);
+  .meta-grid dd a:hover::after {
+    transform: translate(1px, -0.16em);
+  }
 }
 
 .coming-soon-toast {
@@ -441,10 +447,12 @@ h4 {
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
-.thumb-arrow:hover:not(:disabled) {
-  transform: translateY(-1px);
-  background: var(--accent-strong);
-  color: var(--bg-warm);
+@media (hover: hover) {
+  .thumb-arrow:hover:not(:disabled) {
+    transform: translateY(-1px);
+    background: var(--accent-strong);
+    color: var(--bg-warm);
+  }
 }
 
 .thumb-arrow:disabled {
@@ -842,9 +850,11 @@ video:-webkit-full-screen {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.copy-button:hover {
-  background: color-mix(in srgb, var(--card) 82%, var(--card-2));
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .copy-button:hover {
+    background: color-mix(in srgb, var(--card) 82%, var(--card-2));
+    transform: translateY(-1px);
+  }
 }
 
 .citation-note {
