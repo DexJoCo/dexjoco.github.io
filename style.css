@@ -1105,6 +1105,15 @@ video:-webkit-full-screen {
   .article-layout {
     gap: 26px;
   }
+
+  .score-row {
+    grid-template-columns: minmax(80px, 0.9fr) minmax(0, 1.6fr) auto;
+    gap: 10px;
+  }
+
+  .score-name {
+    font-size: 0.78rem;
+  }
 }
 
 
