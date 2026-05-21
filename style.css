@@ -14,6 +14,7 @@
   --shadow: 5px 5px 0 rgba(56, 69, 93, 0.14);
   --grid: linear-gradient(to right, rgba(56, 69, 93, 0.10) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(56, 69, 93, 0.10) 1px, transparent 1px);
+  --nav-h: 66px;
 }
 
 * {
@@ -41,7 +42,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
 }
 
 body {
@@ -52,7 +53,7 @@ body {
     var(--bg);
   font-family: Consolas, "SF Mono", Menlo, "Liberation Mono", monospace;
   line-height: 1.6;
-  padding-top: 66px;
+  padding-top: var(--nav-h);
 }
 
 img {
@@ -860,6 +861,10 @@ video:-webkit-full-screen {
 }
 
 @media (max-width: 1100px) {
+  :root {
+    --nav-h: 130px;
+  }
+
   .vision-strip,
   .gallery-grid,
   .robot-grid {
