@@ -1044,6 +1044,21 @@ video:-webkit-full-screen {
     display: none;
   }
 
+  .thumb-carousel {
+    position: relative;
+  }
+
+  .thumb-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    pointer-events: none;
+    background: linear-gradient(to left, color-mix(in srgb, var(--card) 92%, transparent), transparent);
+  }
+
   .thumb-card {
     flex-basis: 88%;
   }
