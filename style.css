@@ -1089,6 +1089,14 @@ video:-webkit-full-screen {
   .stage-card-wide {
     padding-top: 22px;
   }
+
+  .hero {
+    margin-bottom: 28px;
+  }
+
+  .article-layout {
+    gap: 26px;
+  }
 }
 
 
