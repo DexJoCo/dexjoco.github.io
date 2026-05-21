@@ -745,6 +745,16 @@ video:-webkit-full-screen {
   background: #000;
 }
 
+@media (hover: none) {
+  .hero-media video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  .hero-media video {
+    pointer-events: none;
+  }
+}
+
 .evaluation-block {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
