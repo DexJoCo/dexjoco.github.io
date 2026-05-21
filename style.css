@@ -77,6 +77,9 @@ a {
 
 .page-shell {
   padding: 18px;
+  padding-left: max(18px, env(safe-area-inset-left));
+  padding-right: max(18px, env(safe-area-inset-right));
+  padding-bottom: max(18px, env(safe-area-inset-bottom));
 }
 
 .site-header,
@@ -927,6 +930,9 @@ video:-webkit-full-screen {
 
   .page-shell {
     padding: 14px;
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
+    padding-bottom: max(14px, env(safe-area-inset-bottom));
   }
 
   .hero-overlay {
