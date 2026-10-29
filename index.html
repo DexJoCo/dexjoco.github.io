@@ -37,9 +37,10 @@
         </button>
         <ul class="site-nav" id="primary-nav">
           <li><a href="#top">Home</a></li>
-          <li><a href="#benchmark">Benchmark</a></li>
+          <li><a href="#benchmark">DexJoCo</a></li>
           <li><a href="#toolkit">Toolkit</a></li>
           <li><a href="#policy">Policy</a></li>
+          <li><a class="dataset-nav-link" href="#dexjoco2">DexJoCo2</a></li>
         </ul>
       </nav>
     </header>
@@ -99,6 +100,15 @@
           </div>
         </dl>
 
+        <a class="dataset-announcement" href="#dexjoco2">
+          <span class="dataset-announcement-copy">
+            <span class="dataset-announcement-label">Dataset preview</span>
+            <strong><span class="dataset-announcement-intro">Meet</span> DexJoCo2</strong>
+            <span class="dataset-announcement-description">10 demonstrations. Vision and ten-finger touch.</span>
+          </span>
+          <span class="dataset-announcement-action">Watch demos <span aria-hidden="true">&#8595;</span></span>
+        </a>
+
         <figure class="hero-media hero-media-video">
           <video controls autoplay muted loop playsinline preload="metadata" fetchpriority="high" aria-label="Hero video showing general-purpose robotic manipulation." poster="assets/image/video-posters/DexJoCo-Video-refined_v1.4_HEVC_MP4_compressed.webp">
             <source src="assets/video/DexJoCo-Video-refined_v1.4_HEVC_MP4_compressed.mp4" type="video/mp4">
@@ -117,6 +127,7 @@
         </section>
 
         <section class="prose">
+          <p class="task-label project-section-label">DexJoCo / MuJoCo</p>
           <h2 id="benchmark">Benchmark for task-oriented dexterous manipulation</h2>
           <p>
             DexJoCo tasks are designed around functional interactions rather than isolated object relocation. Each task defines interactive objects and success constraints over execution order, object poses, articulated joint states, and contact, so completion requires meaningful progress toward an everyday objective.
@@ -411,7 +422,7 @@
           <div class="citation-card">
             <div class="citation-head">
               <div>
-                <p class="task-label">Citation</p>
+                <p class="task-label">DexJoCo citation</p>
                 <h2>BibTeX</h2>
               </div>
               <button class="copy-button" type="button" data-copy-bibtex>Copy</button>
@@ -428,6 +439,132 @@
           </div>
         </section>
       </article>
+
+      <section class="dataset-section" id="dexjoco2" aria-labelledby="dexjoco2-title">
+        <header class="dataset-feature">
+          <div class="dataset-feature-copy">
+            <div class="dataset-feature-topline">
+              <p class="task-label">DexJoCo2 / Isaac Sim</p>
+              <span class="dataset-preview-badge">Dataset preview</span>
+            </div>
+            <h2 id="dexjoco2-title">DexJoCo2</h2>
+            <p class="dataset-feature-theme">A VisuoTactile Dataset for Dexterous Robotic Manipulation</p>
+          </div>
+          <div class="dataset-overview">
+            <p>Ten demonstrations of dexterous manipulation in Isaac Sim, with visual observations and tactile maps from all ten fingers.</p>
+            <div class="dataset-reading-guide">
+              <span><i class="dataset-key dataset-key-vision" aria-hidden="true"></i><strong>Upper panel</strong> Task demonstration</span>
+              <span><i class="dataset-key dataset-key-touch" aria-hidden="true"></i><strong>Lower panel</strong> Ten-finger tactile maps</span>
+            </div>
+          </div>
+        </header>
+        <div class="dataset-gallery-heading">
+          <h3>VisuoTactile demonstrations</h3>
+          <p>10 videos <span aria-hidden="true">/</span> Pause, scrub, or view fullscreen</p>
+        </div>
+        <div class="visuotactile-grid">
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/insert_usb_18_ego_tacmap_compressed.webp" aria-label="USB Insertion: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/insert_usb_18_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Precision</span><span aria-hidden="true">01</span></div>
+              <h3>USB Insertion</h3>
+              <p>Insert a USB drive into a laptop port.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/card_swiping_12_ego_tacmap_compressed.webp" aria-label="Card Swiping: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/card_swiping_12_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Precision</span><span aria-hidden="true">02</span></div>
+              <h3>Card Swiping</h3>
+              <p>Grasp a card and swipe it through the reader.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/hammer_nail_19_ego_tacmap_compressed.webp" aria-label="Hammer Nail: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/hammer_nail_19_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Tool use</span><span aria-hidden="true">03</span></div>
+              <h3>Hammer Nail</h3>
+              <p>Grasp a hammer and drive a nail into a wooden block.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/power_screwdriving_09_ego_tacmap_compressed.webp" aria-label="Power Screwdriving: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/power_screwdriving_09_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Tool use</span><span aria-hidden="true">04</span></div>
+              <h3>Power Screwdriving</h3>
+              <p>Use a powered screwdriver to turn a screw.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/pipette_transfer_17_ego_tacmap_compressed.webp" aria-label="Pipette Transfer: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/pipette_transfer_17_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Precision</span><span aria-hidden="true">05</span></div>
+              <h3>Pipette Transfer</h3>
+              <p>Manipulate a pipette to transfer liquid between containers.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/fold_glasses_11_ego_tacmap_compressed.webp" aria-label="Fold Glasses: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/fold_glasses_11_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Object handling</span><span aria-hidden="true">06</span></div>
+              <h3>Fold Glasses</h3>
+              <p>Fold the glasses and place them into their case.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/childproof_bottle_19_ego_tacmap_compressed.webp" aria-label="Childproof Bottle: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/childproof_bottle_19_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Object handling</span><span aria-hidden="true">07</span></div>
+              <h3>Childproof Bottle</h3>
+              <p>Manipulate the cap to open a childproof bottle.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/pick_bucket_18_ego_tacmap_compressed.webp" aria-label="Pick Bucket: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/pick_bucket_18_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Object handling</span><span aria-hidden="true">08</span></div>
+              <h3>Pick Bucket</h3>
+              <p>Grasp and lift a basket by its handle.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/cabinet_retrieval_03_ego_tacmap_compressed.webp" aria-label="Cabinet Retrieval: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/cabinet_retrieval_03_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Access</span><span aria-hidden="true">09</span></div>
+              <h3>Cabinet Retrieval</h3>
+              <p>Open a drawer and retrieve an object from inside.</p>
+            </div>
+          </article>
+          <article class="visuotactile-card">
+            <video controls muted loop playsinline preload="none" width="1280" height="1200" poster="assets/image/video-posters/dexjoco2/safe_unlocking_02_ego_tacmap_compressed.webp" aria-label="Safe Unlocking: task demonstration above and ten-finger tactile maps below.">
+              <source src="assets/video/dexjoco2/safe_unlocking_02_ego_tacmap_compressed.mp4" type="video/mp4">
+            </video>
+            <div class="visuotactile-card-copy">
+              <div class="visuotactile-card-topline"><span>Access</span><span aria-hidden="true">10</span></div>
+              <h3>Safe Unlocking</h3>
+              <p>Operate the keypad and handle to unlock the safe.</p>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
   </div>
   <div class="coming-soon-toast" role="status" aria-live="polite" hidden>Coming soon</div>
