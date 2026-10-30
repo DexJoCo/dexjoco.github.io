@@ -587,7 +587,7 @@ h4 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 15;
+  aspect-ratio: 8 / 9;
   object-fit: contain;
   background: #000;
 }
