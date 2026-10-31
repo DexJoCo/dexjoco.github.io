@@ -3,6 +3,38 @@
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const videos = document.querySelectorAll("video");
+  const manualPlayback = reduceMotion
+    || window.matchMedia("(max-width: 720px), (pointer: coarse)").matches
+    || navigator.connection?.saveData;
+
+  // On phones, keep the poster until the visitor chooses to play a video.
+  // This also preserves the native pause, seeking, and fullscreen controls.
+  if (manualPlayback) {
+    videos.forEach((video) => {
+      video.removeAttribute("autoplay");
+      video.pause();
+      video.controls = true;
+      video.addEventListener("play", () => {
+        videos.forEach((other) => {
+          if (other !== video && !other.paused) other.pause();
+        });
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      const pauseWhenHidden = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) entry.target.pause();
+        });
+      });
+      videos.forEach((video) => pauseWhenHidden.observe(video));
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) videos.forEach((video) => video.pause());
+    });
+    return;
+  }
 
   // Warm nearby videos without downloading every video on page load.
   const prepareVideo = (video) => {
@@ -25,13 +57,7 @@
     videos.forEach(prepareVideo);
   }
 
-  if (reduceMotion) {
-    videos.forEach((video) => {
-      video.removeAttribute("autoplay");
-      video.pause();
-      video.controls = true;
-    });
-  } else if ("IntersectionObserver" in window) {
+  if ("IntersectionObserver" in window) {
     const visibleVideos = new Set();
     const playWhenVisible = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

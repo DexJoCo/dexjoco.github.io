@@ -684,7 +684,16 @@ h4 {
 
 .article-layout {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 42px;
+}
+
+.article-layout > * {
+  min-width: 0;
+}
+
+.article-layout > .prose {
+  width: 100%;
 }
 
 .prose h2 {
@@ -1065,16 +1074,6 @@ video:-webkit-full-screen {
   background: #000;
 }
 
-@media (hover: none) {
-  .hero-media video::-webkit-media-controls {
-    display: none !important;
-  }
-
-  .hero-media video {
-    pointer-events: none;
-  }
-}
-
 .evaluation-block {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
@@ -1197,10 +1196,6 @@ video:-webkit-full-screen {
 }
 
 @media (max-width: 1100px) {
-  :root {
-    --nav-h: 130px;
-  }
-
   .vision-strip,
   .gallery-grid,
   .robot-grid {
@@ -1215,8 +1210,7 @@ video:-webkit-full-screen {
     grid-template-columns: 1fr;
   }
 
-  .outputs-header,
-  .top-nav {
+  .outputs-header {
     flex-direction: column;
     align-items: flex-start;
   }

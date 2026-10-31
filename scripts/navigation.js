@@ -22,6 +22,19 @@
       siteNav.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", closeNav);
       });
+
+      document.addEventListener("click", (event) => {
+        if (!navigation.contains(event.target)) closeNav();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+          closeNav();
+          navToggle.focus();
+        }
+      });
+
+      window.matchMedia("(max-width: 720px)").addEventListener("change", closeNav);
     }
   });
 })();
