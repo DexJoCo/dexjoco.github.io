@@ -21,22 +21,27 @@
   <link rel="icon" href="assets/image/icon/DexJoCo_logo_D_white_v1.0_tpbg.png" type="image/png" media="(prefers-color-scheme: dark)">
   <link rel="apple-touch-icon" href="assets/image/icon/DexJoCo_logo_D_v1.0_tpbg.png">
   <link rel="stylesheet" href="style.css">
+  <script defer src="scripts/videos.js"></script>
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/coming-soon.js"></script>
+  <script defer src="scripts/carousels.js"></script>
+  <script defer src="scripts/citation.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="page-shell">
     <header class="site-header">
-      <nav class="top-nav" aria-label="Primary">
+      <nav data-navigation class="top-nav" aria-label="Primary">
         <a class="brand" href="#top" aria-label="DexJoCo Series home">
           <img class="brand-logo" src="assets/image/icon/DexJoCo_logo_blue_v1.0.png" alt="DexJoCo">
           <span class="brand-series">Series</span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <button data-nav-toggle class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
           <span class="nav-toggle-bar" aria-hidden="true"></span>
           <span class="nav-toggle-bar" aria-hidden="true"></span>
           <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
-        <ul class="site-nav" id="primary-nav">
+        <ul data-nav-menu class="site-nav" id="primary-nav">
           <li><a class="dataset-nav-link" href="#dexjoco2">DexJoCo2</a></li>
           <li><a href="#dexjoco">DexJoCo</a></li>
         </ul>
@@ -283,42 +288,42 @@
                 <button class="thumb-arrow thumb-arrow-prev" type="button" data-carousel-prev aria-label="Scroll single-arm demos left">&#8592;</button>
                 <div class="thumb-viewport" data-carousel-viewport>
                   <div class="thumb-rail">
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Robot watering a plant." poster="assets/image/video-posters/tasks/water-plant_compressed.webp">
                         <source src="assets/video/tasks/water-plant_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Water Plant</h3>
                       <p>Grasp the watering can and apply water to the plant.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Robot hammering a nail into a board." poster="assets/image/video-posters/tasks/hammer-nail_compressed.webp">
                         <source src="assets/video/tasks/hammer-nail_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Hammer Nail</h3>
                       <p>Use the hammer to drive the nail into the wooden board.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Robot moving a mouse and clicking." poster="assets/image/video-posters/tasks/click-mouse_compressed.webp">
                         <source src="assets/video/tasks/click-mouse_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Click Mouse</h3>
                       <p>Move the mouse to the purple mouse pad and click the left mouse button.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Robot picking up an item and lifting a basket." poster="assets/image/video-posters/tasks/pick-bucket_compressed.webp">
                         <source src="assets/video/tasks/pick-bucket_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Pick Bucket</h3>
                       <p>Place the boxed food into the bucket and then lift the bucket.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Robot using tongs to pinch an object." poster="assets/image/video-posters/tasks/pinch-tongs_compressed.webp">
                         <source src="assets/video/tasks/pinch-tongs_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Pinch Tongs</h3>
                       <p>Grasp the tongs and perform three consecutive open-close motions.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Robot folding glasses and placing them into a case." poster="assets/image/video-posters/tasks/fold-glass_compressed.webp">
                         <source src="assets/video/tasks/fold-glass_compressed.mp4" type="video/mp4">
                       </video>
@@ -339,35 +344,35 @@
                 <button class="thumb-arrow thumb-arrow-prev" type="button" data-carousel-prev aria-label="Scroll bimanual demos left">&#8592;</button>
                 <div class="thumb-viewport" data-carousel-viewport>
                   <div class="thumb-rail">
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Bimanual robot operating a microwave." poster="assets/image/video-posters/tasks/bimanual-microwave_compressed.webp">
                         <source src="assets/video/tasks/bimanual-microwave_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Bimanual Microwave</h3>
                       <p>Open the microwave door, place the food inside, close the door, and press the start button.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Bimanual robot unlocking an iPad." poster="assets/image/video-posters/tasks/bimanual-unlock-ipad_compressed.webp">
                         <source src="assets/video/tasks/bimanual-unlock-ipad_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Bimanual Unlock iPad</h3>
                       <p>Grasp the iPad and enter the password 123 to unlock the device.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Bimanual robot solving a Hanoi tower task." poster="assets/image/video-posters/tasks/bimanual-hanoi_compressed.webp">
                         <source src="assets/video/tasks/bimanual-hanoi_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Bimanual Hanoi</h3>
                       <p>Execute the final two moves of the three-level Tower of Hanoi.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Bimanual robot assembling an object." poster="assets/image/video-posters/tasks/bimanual-assembly_compressed.webp">
                         <source src="assets/video/tasks/bimanual-assembly_compressed.mp4" type="video/mp4">
                       </video>
                       <h3>Bimanual Assembly</h3>
                       <p>Grasp the tray with the left hand and the peg with the right hand, then insert the peg into the hole.</p>
                     </article>
-                    <article class="thumb-card">
+                    <article data-carousel-item class="thumb-card">
                       <video muted loop playsinline preload="none" aria-label="Bimanual robot positioning a photograph." poster="assets/image/video-posters/tasks/bimanual-photograph_compressed.webp">
                         <source src="assets/video/tasks/bimanual-photograph_compressed.mp4" type="video/mp4">
                       </video>
@@ -556,7 +561,7 @@
           </section>
 
           <section class="prose citation-block" id="citation">
-            <div class="citation-card">
+            <div data-citation class="citation-card">
               <div class="citation-head">
                 <div>
                   <p class="task-label">DexJoCo citation</p>
@@ -564,7 +569,7 @@
                 </div>
                 <button class="copy-button" type="button" data-copy-bibtex>Copy</button>
               </div>
-              <pre class="bibtex-block"><code>@misc{wang2026dexjocobenchmarktoolkittaskoriented,
+              <pre class="bibtex-block"><code data-bibtex>@misc{wang2026dexjocobenchmarktoolkittaskoriented,
         title={DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo},
         author={Hanwen Wang and Weizhi Zhao and Xiangyu Wang and Siyuan Huang and He Lin and Boyuan Zheng and Rongtao Xu and Gang Wang and Yao Mu and He Wang and Lue Fan and Hongsheng Li and Zhaoxiang Zhang and Tieniu Tan},
         year={2026},
@@ -579,154 +584,7 @@
       </section>
     </main>
   </div>
-  <div class="coming-soon-toast" role="status" aria-live="polite" hidden>Coming soon</div>
-  <script>
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const videos = document.querySelectorAll("video");
-
-    // Warm nearby videos without downloading every video on page load.
-    const prepareVideo = (video) => {
-      if (video.preload === "none") {
-        video.preload = "metadata";
-        video.load();
-      }
-    };
-
-    if ("IntersectionObserver" in window) {
-      const preloadWhenNear = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          prepareVideo(entry.target);
-          observer.unobserve(entry.target);
-        });
-      }, { rootMargin: "400px 0px", threshold: 0 });
-      videos.forEach((video) => preloadWhenNear.observe(video));
-    } else {
-      videos.forEach(prepareVideo);
-    }
-
-    if (reduceMotion) {
-      videos.forEach((video) => {
-        video.removeAttribute("autoplay");
-        video.pause();
-        video.controls = true;
-      });
-    } else if ("IntersectionObserver" in window) {
-      const visibleVideos = new Set();
-      const playWhenVisible = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          const video = entry.target;
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
-            visibleVideos.add(video);
-            prepareVideo(video);
-            if (!document.hidden) video.play().catch(() => {});
-          } else {
-            visibleVideos.delete(video);
-            video.pause();
-          }
-        });
-      }, { threshold: 0.1 });
-      videos.forEach((video) => playWhenVisible.observe(video));
-
-      document.addEventListener("visibilitychange", () => {
-        if (document.hidden) {
-          videos.forEach((video) => video.pause());
-        } else {
-          visibleVideos.forEach((video) => video.play().catch(() => {}));
-        }
-      });
-    }
-
-    const comingSoonToast = document.querySelector(".coming-soon-toast");
-    let comingSoonTimer;
-
-    const navToggle = document.querySelector(".nav-toggle");
-    const siteNav = document.querySelector(".site-nav");
-
-    if (navToggle && siteNav) {
-      const closeNav = () => {
-        navToggle.setAttribute("aria-expanded", "false");
-        navToggle.setAttribute("aria-label", "Open menu");
-        siteNav.classList.remove("is-open");
-      };
-
-      navToggle.addEventListener("click", () => {
-        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-        navToggle.setAttribute("aria-expanded", String(!isOpen));
-        navToggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
-        siteNav.classList.toggle("is-open", !isOpen);
-      });
-
-      siteNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", closeNav);
-      });
-    }
-
-    document.querySelectorAll("[data-coming-soon]").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        if (!comingSoonToast) return;
-
-        comingSoonToast.hidden = false;
-        comingSoonToast.classList.add("is-visible");
-        window.clearTimeout(comingSoonTimer);
-        comingSoonTimer = window.setTimeout(() => {
-          comingSoonToast.classList.remove("is-visible");
-          comingSoonToast.hidden = true;
-        }, 1600);
-      });
-    });
-
-    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
-      const viewport = carousel.querySelector("[data-carousel-viewport]");
-      const prevButton = carousel.querySelector("[data-carousel-prev]");
-      const nextButton = carousel.querySelector("[data-carousel-next]");
-      if (!viewport || !prevButton || !nextButton) return;
-
-      const firstCard = viewport.querySelector(".thumb-card");
-      if (!firstCard) return;
-
-      const getStep = () => firstCard.getBoundingClientRect().width + 16;
-
-      const updateButtons = () => {
-        const maxScroll = viewport.scrollWidth - viewport.clientWidth;
-        prevButton.disabled = viewport.scrollLeft <= 4;
-        nextButton.disabled = viewport.scrollLeft >= maxScroll - 4;
-      };
-
-      prevButton.addEventListener("click", () => {
-        viewport.scrollBy({ left: -getStep(), behavior: "smooth" });
-      });
-
-      nextButton.addEventListener("click", () => {
-        viewport.scrollBy({ left: getStep(), behavior: "smooth" });
-      });
-
-      viewport.addEventListener("scroll", updateButtons, { passive: true });
-      window.addEventListener("resize", updateButtons);
-      updateButtons();
-    });
-
-    const copyBibtexButton = document.querySelector("[data-copy-bibtex]");
-    const bibtexCode = document.querySelector(".bibtex-block code");
-
-    if (copyBibtexButton && bibtexCode) {
-      copyBibtexButton.addEventListener("click", async () => {
-        const originalLabel = copyBibtexButton.textContent;
-
-        try {
-          await navigator.clipboard.writeText(bibtexCode.textContent.trim());
-          copyBibtexButton.textContent = "Copied";
-        } catch (error) {
-          copyBibtexButton.textContent = "Failed";
-        }
-
-        window.setTimeout(() => {
-          copyBibtexButton.textContent = originalLabel;
-        }, 1600);
-      });
-    }
-  </script>
+  <div data-coming-soon-toast class="coming-soon-toast" role="status" aria-live="polite" hidden>Coming soon</div>
   <script data-goatcounter="https://dexjoco.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>
