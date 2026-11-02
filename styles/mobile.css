@@ -69,7 +69,7 @@
   }
 
   .dataset-info-label,
-  .dataset-preview-badge,
+  .dataset-status-badge,
   .dataset-reading-guide strong,
   .dataset-metrics dt {
     font-size: 0.75rem;

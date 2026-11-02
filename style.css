@@ -367,7 +367,7 @@ h4 {
   color: #386861;
 }
 
-.dataset-preview-badge {
+.dataset-status-badge {
   padding: 3px 8px;
   border: 1px solid #b4c9bd;
   background: #eef2e8;
@@ -389,6 +389,32 @@ h4 {
   margin: 14px 0 0;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.dataset-resource-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 10px 14px;
+  border: 1px solid #386861;
+  background: #386861;
+  color: var(--card);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dataset-resource-link:hover {
+  background: #2d554f;
+  box-shadow: 3px 3px 0 rgba(56, 69, 93, 0.14);
+}
+
+.dataset-resource-link:focus-visible {
+  outline: 3px solid #477a74;
+  outline-offset: 4px;
 }
 
 .dataset-overview {
